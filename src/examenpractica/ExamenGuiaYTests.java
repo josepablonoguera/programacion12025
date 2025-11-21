@@ -196,7 +196,7 @@ public class ExamenGuiaYTests {
      */
     private static boolean testCitaConstructorYToString() {
         Fecha f = new Fecha(14, 7, 1978);
-        Cita c = new Cita("603490098", "Jose Noguera", f, "Consulta general");
+        Cita c = new Cita("703490020", "Jose Noguera", f, "Consulta general");
         String s = c.toString();
         if (s == null) {
             System.out.println("Cita.toString() devuelve null.");
@@ -204,7 +204,7 @@ public class ExamenGuiaYTests {
         }
         s = s.trim();
         // Aceptamos que use el toString() de Fecha
-        boolean contieneCedula = s.contains("603490098");
+        boolean contieneCedula = s.contains("703490020");
         boolean contieneNombre = s.contains("Jose Noguera");
         boolean contieneFecha = s.contains("14/7/1978") || s.contains("14/07/1978");
         boolean contieneMotivo = s.contains("Consulta general");
