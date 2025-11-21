@@ -18,7 +18,9 @@ public class Votante {
    private String primerApellido;
    private String segundoApellido;
 
-    public Votante(String cedula, String codPostal, String fechaVencimiento, String codElectoral, String nombreCompleto, String primerApellido, String segundoApellido) {
+    public Votante(String cedula, String codPostal, String fechaVencimiento, 
+            String codElectoral, String nombreCompleto, String primerApellido,
+            String segundoApellido) {
         this.cedula = cedula;
         this.codPostal = codPostal;
         this.fechaVencimiento = fechaVencimiento;
@@ -90,6 +92,13 @@ public class Votante {
     public String getNombreCompleto() {
         return nombreCompleto;
     }
+    
+     /**
+     * @return the nombreCompleto
+     */
+    public String getNombreCompletoApellidos() {
+        return cedula + " "+ nombreCompleto.trim() + " "+ primerApellido.trim() + " "+segundoApellido.trim() ;
+    }
 
     /**
      * @param nombreCompleto the nombreCompleto to set
@@ -124,6 +133,11 @@ public class Votante {
      */
     public void setSegundoApellido(String segundoApellido) {
         this.segundoApellido = segundoApellido;
+    }
+
+    @Override
+    public String toString() {
+        return "Votante{" + "cedula=" + cedula + ", codPostal=" + codPostal + ", fechaVencimiento=" + fechaVencimiento + ", codElectoral=" + codElectoral + ", nombreCompleto=" + nombreCompleto + ", primerApellido=" + primerApellido + ", segundoApellido=" + segundoApellido + '}';
     }
    
    
