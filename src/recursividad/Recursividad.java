@@ -120,7 +120,7 @@ public class Recursividad {
             return true;
         }
 
-        return esImpar(n );
+        return esImpar(n);
     }
 
     private static boolean esImpar(int n) {
@@ -128,6 +128,6 @@ public class Recursividad {
         if (n % 2 != 0) {
             return false;
         }
-        return esPar(n );
+        return esPar(n);
     }
 }
